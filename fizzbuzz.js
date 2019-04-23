@@ -6,28 +6,39 @@ function fizzbuzz() {
     console.log('Welcome to FizzBuzz!');
 
     // Put your code here...
-    for (let i = 1; i <= 165; i++) {
+    for (let i = 1; i <= 195; i++) {
         
-        let output = '';
+        let output = [];
 
         if (i % 3 === 0) {
-            output += 'Fizz';
+            output.push('Fizz');
         }
         
         if (i % 5 === 0) {
-            output += 'Buzz';
+            output.push('Buzz');
         }
 
         if (i % 7 === 0) {
-            output += 'Bang';
+            output.push('Bang');
         }
 
         if (i % 11 === 0) {
-            output = 'Bong';
+            output = ['Bong'];
+        }
+
+        if (i % 13 === 0) {
+            let lastItemNotBeginningWithB = -1;
+            for (let index = 0; index < output.length; index++) {
+                if (!output[index].startsWith('B')) {
+                    lastItemNotBeginningWithB = index;
+                }
+            }
+            let indexToInsertFezz = lastItemNotBeginningWithB + 1;
+            output.splice(indexToInsertFezz, 0, 'Fezz');
         }
 
         if (output.length > 0) {
-            console.log(output);
+            console.log(output.join(''));
         }
         else {
             console.log(i);

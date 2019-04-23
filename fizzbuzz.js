@@ -6,7 +6,7 @@ function fizzbuzz() {
     console.log('Welcome to FizzBuzz!');
 
     // Put your code here...
-    for (let i = 1; i <= 195; i++) {
+    for (let i = 1; i <= 255; i++) {
         
         let output = [];
 
@@ -35,6 +35,10 @@ function fizzbuzz() {
             }
             let indexToInsertFezz = lastItemNotBeginningWithB + 1;
             output.splice(indexToInsertFezz, 0, 'Fezz');
+        }
+
+        if (i % 17 === 0) {
+            output.reverse();
         }
 
         if (output.length > 0) {

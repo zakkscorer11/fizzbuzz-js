@@ -6,7 +6,7 @@ function fizzbuzz() {
     console.log('Welcome to FizzBuzz!');
 
     // Put your code here...
-    for (let i = 1; i <= 105; i++) {
+    for (let i = 1; i <= 165; i++) {
         
         let output = '';
 
@@ -20,6 +20,10 @@ function fizzbuzz() {
 
         if (i % 7 === 0) {
             output += 'Bang';
+        }
+
+        if (i % 11 === 0) {
+            output = 'Bong';
         }
 
         if (output.length > 0) {

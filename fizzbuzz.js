@@ -32,6 +32,10 @@ function fizzbuzz() {
       {
         console.log(" Bong" )
       }
+      else if ( i%13 === 0 )
+      {
+        console.log(" Fezz" )
+      }
       else
       {
         console.log(i);

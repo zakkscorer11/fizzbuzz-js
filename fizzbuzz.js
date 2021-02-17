@@ -28,6 +28,10 @@ function fizzbuzz() {
       {
         console.log(" FizzBang" )
       }
+      else if ( i%11 === 0 )
+      {
+        console.log(" Bong" )
+      }
       else
       {
         console.log(i);
